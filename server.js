@@ -13,7 +13,12 @@ app.use(cors());
 app.use(express.json());
 app.use("/leaderboard", leaderboardRoutes);
 
-const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/clickgame";
+const mongoUri = process.env.MONGO_URI;
+
+if (!mongoUri) {
+    console.error("MONGO_URI is missing. Set it in Render environment variables.");
+    process.exit(1);
+}
 
 mongoose.connect(mongoUri)
 .then(() => {
