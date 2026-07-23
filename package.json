@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
+    "build": "echo \"Backend build step skipped\"",
     "start": "node server.js"
   },
   "keywords": [],
