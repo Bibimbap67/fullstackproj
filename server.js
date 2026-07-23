@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import leaderboardRoutes from "./server/routes/leaderboard.js";
+import leaderboardRoutes from "./routes/leaderboard.js";
 
 dotenv.config();
 
